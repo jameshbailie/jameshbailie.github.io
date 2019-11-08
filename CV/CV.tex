@@ -1,0 +1,407 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[DVI=12]{scrartcl}
+\usepackage{enumitem}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+%\usepackage[headsepline]{scrlayer-scrpage}
+%\usepackage[automark]{scrlayer-scrpage}
+
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\hspace{2.1cm}\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\ShortDescription}[2]{\hangindent=2em\hangafter=0\noindent\raggedright{\small\textit{#1}}  \ $\cdotp$ \ \footnotesize{#2} \par\normalsize\vspace{1em}}
+
+\usepackage[a4 paper, left=2.3in,right=1in,top=1in,bottom=1in]{geometry}
+
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\lohead{\footnotesize \hspace{-3.4cm} Curriculum Vitae}
+\rohead{\footnotesize James Bailie}
+\rofoot[\pagemark]{\pagemark}
+
+
+
+\setheadsepline[16.08cm]{.4pt}[\hspace{-3.4cm}]
+
+%\clearscrheadfoot
+%\rhead{\vspace{0.01cm}Hi there!}
+%\setkomafont{pagehead}{\normalfont\bfseries}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\rhead{Share\LaTeX}
+%\lhead{Guides and tutorials}
+%\rfoot{Page \thepage}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{James Bailie}}\vspace{1.5em} % Your name
+
+%\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+%\NewEntry{}{\textit{Born in Canada,}}{20 November 1987} % Birthplace and date
+
+
+\begin{flushright}\footnotesize
+%Private:
+%3A Banfield St
+%
+%Downer, ACT 2602
+%
+%+61 400 262 577
+%
+%\href{mailto:jameshbailie@gmail.com}{jameshbailie@gmail.com}
+
+%Public:
+[firstName] h [lastName] at gmail dot com
+
+\href{https://jameshbailie.github.io/}{jameshbailie.github.io}
+
+\end{flushright}
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+%\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+%\Description{Gain fundamental experience in my area of interest and expertise.}\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+%The confusion comes with the fact that, as a general rule, the subject is understood in a resume, but the pronouns are not included. So, for example, when speaking about a current job, instead of saying, “I oversee all office operations, I control a \$100,000 inventory, and I balance the books for four major accounts,” a resume usually reads, “Oversee all office operations, control a \$100,000 inventory, and balance the books for four major accounts.” In resume-ese, the “I” is understood, but not stated, in order to give the document a more objective and professional tone.
+%
+%But often people see these sentences and are compelled to add an “s” to the verbs, placing them in the third person. Hence the sentence “oversees all office operations, maintains a \$100,000 inventory, and balances the books for four major accounts” infers the third person verb, as in “she/he oversees all office operations,” etc.
+
+\noindent\spacedlowsmallcaps{Education \& Research}\vspace{1em}
+
+\NewEntry{2013--2017}{Bachelor of Science (Honours)}
+
+\Description{\MarginText{The Australian National University}Majored in mathematics and statistics with a GPA of 6.971. Received high distinctions in courses covering metric spaces, spectral theory, Hilbert spaces, measure theory, topology, ODEs, vector calculus, algebraic topology, linear algebra, group theory, generalised linear modelling, statistical inference, stochastic processes, markov chains and martingales. Also completed 9 courses in computer science, including artificial intelligence, reinforcement learning, algorithms, information theory and theory of computation.\newline
+Honours in pure mathematics completed in 2017 with thesis \emph{Vector Fields on Spheres}, supervised by Dr.~Vigleik \textsc{Angeltveit}.}
+
+\NewEntry{2016--2017}{Vacation Research Scholar}
+
+\Description{\MarginText{The Australian Mathematical Sciences Institute}Summer project \emph{Stable Homotopy and Category of Spectra}, supervised by Dr.~Vigleik \textsc{Angeltveit}. Work presented at AMSIConnect conference in Melbourne, February 2017. \href{http://vrs.amsi.org.au/james-bailie-2017/}{vrs.amsi.org.au/james-bailie-2017}}
+
+
+\NewEntry{2013--2014}{Summer Research Scholar}
+
+\Description{\MarginText{The University of Queensland}At the Centre for Educational Innovation and Technology.}
+
+%\NewEntry{2013-2017}{The University of California, Berkeley}
+%
+%\Description{\MarginText{Bachelor of Science Honours}GPA: 6.967\ \ $\cdotp$\ \ \textit{First Class Honours}\ \ $\cdotp$\ \ School: Business and Administration\newline 
+%Thesis: \textit{Money Is The Root Of All Evil -- Or Is It?}\newline
+%Description: This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.\newline
+%Advisors: Prof.~James \textsc{Smith} \& Assoc. Prof.~Jane \textsc{Smith}}
+%
+%%------------------------------------------------
+%
+%\NewEntry{2007-2010}{The University of California, Berkeley}
+%
+%\Description{\MarginText{Bachelor of Business Studies}GPA: 7.5\ \ $\cdotp$\ \ \textit{Commerce Specialization}\ \ $\cdotp$\ \ School: Business and Administration\newline
+%Description: This degree focussed heavily on important things such as personnel management and mundane paperwork.}
+%
+%%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+\spacedlowsmallcaps{Awards \& Scholarships}\vspace{1em}
+
+\ShortDescription{2019}{\MarginText{The Australian-American Fulbright Commission}Fulbright Futures Scholarship}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{Awarded for a full U.S. PhD program (up to five years) starting in 2020. Benefits include paid tuition and research fees, a monthly stipend of approximately US\$2,400, and health insurance, for a period of five years.}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\ShortDescription{2017}{\MarginText{The Australian National University}ANU Honours Scholarship}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\ShortDescription{\color{white}2017}{Hilary Booth Honours Scholarship (declined)}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\ShortDescription{2016}{Hanna Neumann Prize for Third Year Mathematics (awarded to the top student in the cohort)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\ShortDescription{2015}{Boyapati Computer Science and Mathematics Prize for Second Year (awarded to the top student in the cohort)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\ShortDescription{2014}{Boyapati Computer Science and Mathematics Prize for First Year (awarded to the top student in the cohort)}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{2018--Present}{Researcher}
+
+\Description{\MarginText{The Australian Bureau of Statistics}Working on machine learning applications, administrative data use, data integration, confidentiality, differential privacy, and emerging statistical attacks, within the Methodology Division.\newline
+Extensive use of the R programming language as well as experience in writing mathematical proofs and developing theoretical analysis. Completed graduate courses in survey methodology and time series methods, with marks of 90\% and 98\% respectively.\newline
+Started as a graduate in 2018 in Methodology Futures, with projects on data integration and machine learning decision models to improve Census workforce efficiency.\newline
+In November 2018, rotated to the Data Integration, Access and Confidentiality Methodology Unit. Currently investigating statistical privacy vulnerabilities (e.g. averaging, differencing and reconstruction attacks) and protections (including the application of differential privacy in the ABS).\newline
+In 2019, received the \emph{ABS Census and Data Services Group Excellence Award} for this work.
+}
+
+\NewEntry{2013--2017}{Tutor}
+
+\Description{\MarginText{The Australian National University \& Self-employed}Tutor for \emph{MATH1115 Advanced Mathematics and Applications 1} at the Australian National University in semester 1 of 2017. In semester 2, tutor for the follow-on course \emph{MATH1116}. Led classes of approx. 30 students in discussions and small group work in addition to marking fortnightly assignments and exams. Received an average rating of 4.3 out of 5 in the student evaluations of overall satisfaction. Previously, a private high school and university mathematics tutor.
+}
+
+\NewEntry{2013--2016}{Data Analyst}
+
+\Description{\MarginText{Menzies School of Health Research}Casual employee in data management and analysis for the \emph{Engaging Stakeholders in Identifying Priority Evidence-Practice Gaps and Strategies for Improvement in Primary Health Care} project during 2013 to 2015. Tasks included data cleaning, synthesis and presentation, using Python and STATA programming languages. Managed and analysed large datasets (2 million+ entries) in order to extract indicators on health centre performance.\newline
+In 2016, conducted Poisson regression to investigate trends in hospitalisation rates in Broken Hill, using the R programming language.
+}
+
+\NewEntry{2011--2013}{IT Assistant}
+
+\Description{\MarginText{Menzies School of Health Research}Casual employee as part of the One21seventy National Centre for Quality Improvement in Indigenous Primary Health Care. Worked on database design and management, statistical analysis, Python and VBA programming, document proof reading, data entry and technical writing.}
+
+%------------------------------------------------
+%
+%\NewEntry{2012--Present}{1\textsuperscript{st} Year Analyst, \textsc{Lehman Brothers}}
+%
+%\Description{\MarginText{Lehman Brothers}Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (ags, oils, precious and base metals), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping. \\ Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}}
+%
+%%------------------------------------------------
+%
+%\NewEntry{2010--2011}{Summer Intern, \textsc{Initech Inc}  --- Chicago}
+%
+%\Description{\MarginText{Initech Inc}Rated "truly distinctive" for Analytical Skills and Teamwork. \\ Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
+%
+%%------------------------------------------------
+%
+%\NewEntry{Jan-Mar 2011}{Computer Technician, \textsc{Buy More} --- Burbank}
+%
+%\Description{\MarginText{Buy More}Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again. \\ Reference: Big \textsc{Mike}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:mike@buymore.com}{mike@buymore.com}}
+%
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Selected Papers}\vspace{1em}
+
+\Description{\MarginText{2019}Bailie J, \emph{Big Data, Differential Privacy and National Statistical Organisations}.
+Submitted to the 2020 Interational Association for Official Statistics (IAOS) Young Statisticians Prize, for publication in the \emph{Statistical Journal of the IAOS}.}
+
+\Description{Chipperfield J, Bailie J, \emph{Weighting a Survey that is Linked to Multiple Administrative Files when there are False Negatives}. Submitted to the special issue of \emph{Statistics in Transition new series} on statistical data integration.}
+
+\Description{Bailie J, Chien C, \emph{ABS Perturbation Methodology Through the Lens of Differential Privacy}, UN Economic Commission for Europe, Work Session on Statistical Data Confidentiality.}
+
+\Description{Bailie J, Lu E, Elazar D, Chiu K, \emph{A Disrete Calibration Approach to Improving Data Linkage}. Paper presented to the ABS Methodological Advisory Committee (members include Professor Robert Breunig, Professor Kerrie Mengersen, Professor Scott Sisson, Professor Dianne Cook, Scientia Professor Robert Kohn).}
+
+\Description{\MarginText{2014--2016}Statistical analysis while at the Menzies School of Health Research acknowledged in seven publications. See \href{https://jameshbailie.github.io/Papers/index.html}{jameshbailie.github.io/Papers/index.html} for a comprehensive list.}
+
+%\NewEntry{January 2013}{Publication Title}
+%
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+%
+%%------------------------------------------------
+%
+%\NewEntry{Sept. 2012}{Publication Title}
+%
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+%
+%%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	Talks
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Selected Talks}\vspace{1em}
+
+\Description{\MarginText{8/11/2019}\emph{The Promises of Differential Privacy}, ABS Seminar}
+
+\Description{\MarginText{1/10/2019}\emph{Using Admin Data and Machine Learning to Predict Dwelling Occupancy on Census Night}, Statistical Society of Australia's Young Statisticians Conference}
+
+\Description{\MarginText{2/9/2019}\emph{New Statistical Attacks on Population Count Tables}, ABS Seminar}
+
+\Description{\MarginText{9/2/2017}\emph{Stable Homotopy Theory}, Australian Mathematical Sciences Institute Connect Conference}
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+%
+\spacedlowsmallcaps{Programming Skills}\vspace{1em}
+
+\Description{\MarginText{Basic}C++, Javascript, Visual Basic for Applications}
+
+\Description{\MarginText{Intermediate}Git, Linux command-line, Python, SAS, STATA, SQL}%, Microsoft Word, Microsoft Access}
+
+\Description{\MarginText{Advanced}R, \LaTeX}%, Microsoft Excel}
+
+%%------------------------------------------------
+%
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+\ShortDescription{\MarginText{Professional Associations}2018--Present}{Member of the Statistical Society of Australia}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\ShortDescription{\MarginText{Service}2015--Present}{Elected to the ANU Mountaineering Club executive:
+\begin{itemize}[leftmargin=.75in, label=] 
+\vspace{-0.25em}
+\item 2015 general officer; 2016-2017 president; 2018-2019 secretary; 2019-present vice president
+\item Inducted into the ANU Mountaineering Club \emph{Hall of Fame} in 2019.
+\item Canberra's largest and most active outdoor club with 400+ members and 250+ trips annually.
+\item ANUMC awarded ANU Sport \emph{Club of the Year} in 2018.\end{itemize}}
+
+%\vspace{-0.75em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\ShortDescription{2015}{Awarded \emph{Contribution to Sport Throughout the Years} at Ursula Hall, ANU,
+%\begin{itemize}[leftmargin=.8in, label=] 
+%\vspace{-0.25em}
+%\item for coaching soccer, AFL, relay running and Inward Bound (long distance running and navigation team event).\end{itemize}}
+
+\vspace{-0.75em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\ShortDescription{2015}{Senior Resident (2015), Academic Mentor (2014--2015) and IT Assistant {\color{white}(2014) at }(2014) at Ursula Hall, ANU}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\ShortDescription{2014--2015}{Academic Mentor at Ursula Hall, ANU}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\ShortDescription{2014}{IT Assistant at Ursula Hall, ANU}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\ShortDescription{2012}{Volunteer teacher at a rural school in Kanungu, Uganda}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\ShortDescription{2011}{Peer skills helper and volunteer tutor at Indooroopilly State High School's
+%\begin{itemize}[leftmargin=.8in, label=] 
+%\vspace{-0.25em}
+%\item weekly maths help sessions\end{itemize}}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\ShortDescription{\MarginText{Interests}2016--Present}{Mountaineering. Sponsored expeditions: 
+\begin{itemize}[leftmargin=.75in, label=] 
+\vspace{-0.25em}
+\item New Zealand (11/2016 and 12/2017-2/2018) \item Kyrgyzstan (two first ascents, including a 5000m+ peak; 8-9/2018) \item Peru (6-8/2019).\end{itemize}}
+
+%------------------------------------------------
+
+%\vspace{1em}
+%
+%\ShortDescription{\MarginText{Referees}\normalfont \footnotesize Dr.~Veronica \textsc{Matthews}}{Supervisor at Menzies School of Health Research from 2013 to 2015
+%\ \ $\cdotp$\ \ 0423 826 160\ \ $\cdotp$\ \ 
+%\href{veronica.matthews@sydney.edu.au}{veronica.matthews@sydney.edu.au}}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\ShortDescription{\normalfont \footnotesize Dr.~Linda \textsc{Stals}}{Course convenor and tutor supervisor for \emph{MATH1115 Advanced Mathematics and Applications 1}, semester 1, 2017
+%\ \ $\cdotp$\ \ (02) 6125 3966\ \ $\cdotp$\ \ 
+%\href{linda.stals@anu.edu.au}{linda.stals@anu.edu.au}}
+
+%------------------------------------------------
+%
+%\vspace{1em}
+%
+%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+%
+%%------------------------------------------------
+%
+%\vspace{1em}
+%
+%\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+%\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+%
+%\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Mothertongue}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{\parbox{\langbox}{\textsc{Spanish}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{\parbox{\langbox}{\textsc{Dutch}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
+%
+%\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%%------------------------------------------------
+%
+%\Description{\MarginText{Interests}Piano\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Running\ \ $\cdotp$\ \ Chess\ \ $\cdotp$\ \ Dancing}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
