@@ -17,12 +17,12 @@ author_profile: true
 <div class="wordwrap"><a href="/cv/">See my CV for a more extensive list of talks.</a></div>
 
 
-{% assign now = 'now' | date: '%s' %}
+{% assign now = 'now' | date: '%s' | plus: -86400 | plus: -86400 | plus: -86400 %} {% comment %} Add three days leeway -- so talks in the last three days appear as Upcoming still {% endcomment %}
 {% assign upcoming_talks = '' | split: '' %}
 {% assign past_talks = '' | split: '' %}
 
 {% for talk in site.talks %}
-	{% assign talk_date = talk.date | date: '%s' %}
+	{% assign talk_date = talk.date | date: '%s' | plus: 0 %}
 	{% if talk_date >= now %}
 		{% unless talk.display and talk.display == "false" %}
 			{% assign upcoming_talks = upcoming_talks | push: talk %}
