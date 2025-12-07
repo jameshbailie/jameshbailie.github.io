@@ -42,8 +42,11 @@ author:
   orcid            : "https://orcid.org/0000-0002-9301-2961"
   semantic         : # URL
   pubmed           : # URL
+  ssrn             : # URL
   researchgate     : # URL
   scopus           : # URL
+  zotero           : # URL
+
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
