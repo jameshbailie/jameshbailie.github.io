@@ -16,4 +16,6 @@ poster_url: '/files/posters/2025-06-15-Property-elicitation-on-imprecise-probabi
 talk_url: '/talks/2025-06-15-Property-elicitation-on-imprecise-probabilities'
 ---
 
+This paper was presented at the 2025 EurIPS workshop <i>Epistemic Intelligence in Machine Learning</i> and the 2025 <i>International Symposium on Imprecise Probabilities</i> (both non-archival).
+
 Authors ordered alphabetically.

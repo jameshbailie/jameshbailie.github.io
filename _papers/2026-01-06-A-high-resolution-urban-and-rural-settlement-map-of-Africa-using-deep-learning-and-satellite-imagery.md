@@ -16,4 +16,3 @@ publisher_url: 'https://www.nature.com/articles/s41598-025-34295-7'
 redirect_from: 
   - /papers/2024-11-05-Mapping-Africa-settlements-High-resolution-urban-and-rural-map-by-deep-learning-and-satellite-imagery
 ---
-
