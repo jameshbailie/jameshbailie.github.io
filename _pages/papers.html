@@ -4,11 +4,9 @@ title: "Selected papers (by topic)"
 tab_title: "Papers"
 permalink: /papers/
 author_profile: true
-redirect_from: 
-  - /Papers
-  - /Papers/
-  - /Papers/index.html
 ---
+
+
 
 {% include base_path %}
 
@@ -17,6 +15,10 @@ redirect_from:
 	document.querySelector('.page__title').classList.add('header-with-buttons');
 	document.querySelector('.button-expand-container').classList.add('button-expand-container-aligned');
 </script>
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
 
 <div class="wordwrap"><a href="/papers_all/">See here for a full list of my papers.</a></div>
 
