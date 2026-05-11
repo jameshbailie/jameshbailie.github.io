@@ -62,7 +62,7 @@
 		{% assign byline = authors_long_formatted | append: ".<br>" %}
 		{% if page.to_appear %}
 			{% assign byline = byline | append: "To appear in " %}
-		{% else if page.to_appear_at %}
+		{% elsif page.to_appear_at %}
 			{% assign byline = byline | append: "To appear at " %}
 		{% endif %}
 		{% assign byline = byline | append: "<i>" | append: page.venue | append: "</i>, " %}

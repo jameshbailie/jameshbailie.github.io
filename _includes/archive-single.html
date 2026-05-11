@@ -83,7 +83,7 @@
 			
 			{% if post.to_appear %}
 				{% assign byline = byline | append: "To appear in " %}
-			{% else if page.to_appear_at %}
+			{% elsif post.to_appear_at %}
 				{% assign byline = byline | append: "To appear at " %}
 			{% endif %}
 			
