@@ -34,4 +34,6 @@
   to: /files/slides/2023-07-13-Differential-privacy-General-inferential-limits-via-intervals-of-measures.pdf
 - from: /Papers/slides/NBER23.pdf
   to: /files/slides/2023-05-04-Can-swapping-be-differentially-private-A-refreshment-stirred-not-shaken.pdf
+  from: /files/papers/2025-01-14-A-refreshment-stirred-not-shaken-II-Invariant-preserving-deployments-of-differential-privacy-for-the-US-Decennial-Census.pdf
+  to: /files/papers/2026-02-24-A-refreshment-stirred-not-shaken-Invariant-preserving-deployments-of-differential-privacy-for-the-US-Decennial-Census.pdf
   

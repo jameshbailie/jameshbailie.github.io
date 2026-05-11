@@ -4,7 +4,8 @@ collection: papers
 category: privacy
 permalink: /papers/2026-01-30-Persuasive-privacy
 date: 2026-01-30
-venue: 'Preprint'
+venue: 'ICML'
+to_appear_at: true
 authors_short: 'J Bon, !!me!!, J Rousseau, C Robert'
 authors_long: 'Joshua J. Bon, !!me!!, Judith Rousseau, Christian P. Robert'
 citation: 'Joshua J. Bon, James Bailie, Judith Rousseau and Christian P. Robert (2026). “Persuasive Privacy”. doi: <a href="https://doi.org/10.48550/arXiv.2601.22945" target="_blank">10.48550/arXiv.2601.22945</a>'
