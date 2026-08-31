@@ -9,7 +9,7 @@
 		document.querySelector('.button-expand-container').classList.add('button-expand-container-aligned');
 	</script>
 	<br>
-{% endif %}
+{% endif %}	
 
 {% if page.read_time %}
   <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
@@ -26,13 +26,13 @@
 	{% assign tagline = "" %}
 	{% if page.role %}
 	  {% assign tagline = tagline | append: page.role %}
-	  {% if page.type or page.venue_long or page.venue %}
+	  {% if page.course_type or page.venue_long or page.venue %}
 	  	{% assign tagline = tagline | append: ", " %}
 	  {% endif %}
 	{% endif %}
 
-	{% if page.type %}
-		{% assign tagline = tagline | append: page.type %}
+	{% if page.course_type %}
+		{% assign tagline = tagline | append: page.course_type %}
 		{% if page.venue_long or page.venue %}
 			{% assign tagline = tagline | append: ", " %}
 		{% endif %}
@@ -57,6 +57,10 @@
 {% elsif page.collection == 'papers' %}
 
 	{% assign authors_long_formatted = page.authors_long | replace: "!!me!!", "James Bailie" %}
+	
+	{% if page.publication_type %}
+		{% assign authors_long_formatted = authors_long_formatted | append: " (" | append: page.publication_type | append: ")" %}
+	{% endif %}
 	
 	{% if page.venue %}
 		{% assign byline = authors_long_formatted | append: ".<br>" %}

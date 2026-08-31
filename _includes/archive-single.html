@@ -44,8 +44,15 @@
 		{% if post.collection == 'teaching' %}
 			{{post.role}}, <i>{{ post.venue }}</i>, {{ post.when_taught }}.
 		{% elsif post.collection == 'papers' %}
+		
+			{% if post.publication_type %}
+				{% assign authors_with_type = post.authors_short | append: "ENDOFAUTHORS (" | 
+					append: post.publication_type | append: ")" %}
+			{% else %}
+				{% assign authors_with_type = post.authors_short %}
+			{% endif %}
 					
-			{% assign authors_short_formatted = post.authors_short | replace: "!!me!!", "<b>JB</b>" |
+			{% assign authors_short_formatted = authors_with_type | replace: "!!me!!", "<b>JB</b>" |
 				replace: ",!!order!!!!equal!!", ",\(\negthinspace^{\dagger*}\)" |
 				replace: ",!!equal!!!!order!!", ",\(\negthinspace^{*\dagger}\)" |
 				replace: ",!!order!!", ",\(\negthinspace^\dagger\)" | 
@@ -53,7 +60,13 @@
 				replace: "!!order!!!!equal!!,", ",\(\negthinspace^{\dagger*}\)" |
 				replace: "!!equal!!!!order!!,", ",\(\negthinspace^{*\dagger}\)" |
 				replace: "!!order!!,", ",\(\negthinspace^\dagger\)" | 
-				replace: "!!equal!!,", ",\(\negthinspace^*\)" %}
+				replace: "!!equal!!,", ",\(\negthinspace^*\)" |
+				replace: "!!order!!!!equal!!ENDOFAUTHORS (,", "\(\negthinspace^{\dagger*}\) (" |
+				replace: "!!equal!!!!order!!ENDOFAUTHORS (", "\(\negthinspace^{*\dagger}\) (" |
+				replace: "!!order!!ENDOFAUTHORS (", "\(\negthinspace^\dagger\) (" | 
+				replace: "!!equal!!ENDOFAUTHORS (", "\(\negthinspace^*\) (" |
+				replace: "ENDOFAUTHORS (", " (" |
+			%}
 
 			{% assign parts = authors_short_formatted | split: '!!' %}
 			
