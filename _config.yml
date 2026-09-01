@@ -87,8 +87,11 @@ author:
 publication_category:
   privacy:
     title: 'Statistical data privacy'
+  sustainable_development:
+    title: 'Statistical methodology for sustainable development'
   foundations:
     title: 'Foundations of statistical learning'    
+
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
