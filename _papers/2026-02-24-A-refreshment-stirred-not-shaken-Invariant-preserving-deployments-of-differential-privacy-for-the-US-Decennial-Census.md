@@ -21,4 +21,4 @@ redirect_from:
 
 Due to HDSR's poor formatting of mathematical equations and tables, I recommend reading <a href="/files/papers/2026-02-24-A-refreshment-stirred-not-shaken-Invariant-preserving-deployments-of-differential-privacy-for-the-US-Decennial-Census.pdf" target="_blank">the paper PDF here</a>, rather than the HDSR publication. 
 
-This article is Part II of a trio of papers. See <a href="/papers/2025-01-01-A-refreshment-stirred-not-shaken-I-Five-building-blocks-of-differential-privacy" target="_blank">Part I here</a> and <a href="/papers/2025-04-16-A-refreshment-stirred-not-shaken-III-Can-swapping-be-differentially-private" target="_blank">Part III here</a>.
+This article is Part II of a trio of papers (all of which are themselves entirely self-contained). See <a href="/papers/2025-01-01-A-refreshment-stirred-not-shaken-I-Five-building-blocks-of-differential-privacy" target="_blank">Part I here</a> and <a href="/papers/2025-04-16-A-refreshment-stirred-not-shaken-III-Can-swapping-be-differentially-private" target="_blank">Part III here</a>.
