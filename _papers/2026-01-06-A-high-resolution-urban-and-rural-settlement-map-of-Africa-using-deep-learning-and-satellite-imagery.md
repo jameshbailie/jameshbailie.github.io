@@ -17,7 +17,4 @@ redirect_from:
   - /papers/2024-11-05-Mapping-Africa-settlements-High-resolution-urban-and-rural-map-by-deep-learning-and-satellite-imagery
 ---
 
-\(^*\) indicates equal contribution.
-
-<br><br>
-
+\\(^*\\) indicates equal contribution.
