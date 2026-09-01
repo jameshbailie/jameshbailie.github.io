@@ -132,5 +132,73 @@
 	<span class="label">' | append: talk_label | append: '</span></a>' %}
 {% endif %}
 
+{% if page.virtual_poster_url %}
+	{% if page.paper_url or page.preprint_url or page.publisher_url or page.arxiv_url or page.poster_url or page.talk_url %}
+		{% assign links = links | append: links_separator %}
+	{% endif %}
+
+	{% assign links = links | append: '<a href="' | append: page.virtual_poster_url | append: '" class="link-with-icon"' | append: a_tag | append: '
+	<span class="icon">
+	<svg width="20px" height="20px" viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	        <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -3442.000000)" fill="none">
+	            <g id="icons" transform="translate(56.000000, 160.000000)">
+	                <path d="M98.8968326,3293.97071 C88.4628326,3293.97071 87.7908326,3294.27678 86.7908326,3293.53604 C84.6948326,3291.98278 87.1428326,3288.76062 89.2388326,3290.42255 C87.1828326,3283.66917 97.5638326,3281.38814 98.9018326,3287.99895 C102.844833,3287.85838 103.156833,3293.97071 98.8968326,3293.97071" stroke="' | append: icon_color | append: '" stroke-width="1.6"/>
+	            </g>
+	        </g>
+	    </g>
+	</svg></span>
+	<span class="label">Virtual Poster</span>
+	</a>' %}
+{% endif %}
+
+{% if page.recording_url %}
+	{% if page.paper_url or page.preprint_url or page.publisher_url or page.arxiv_url or page.poster_url or page.talk_url or page.virtual_poster %}
+		{% assign links = links | append: links_separator %}
+	{% endif %}
+	
+	
+	{% assign links = links | append: '<a href="' | append: page.recording_url | append: '" class="link-with-icon" target="_blank">
+	<span class="icon topZeroPad">
+		<svg width="20px" height="20px" viewBox="2 2 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M8 10.4656V13.5344C8 15.6412 10.2299 16.4543 11.6609 15.7205L14.6534 14.1861C16.4489 13.2655 16.4488 10.7345 14.6534 9.81391L11.6609 8.27949C10.2299 7.54573 8 8.3588 8 10.4656ZM10 13.5344C10 13.8889 10.4126 14.113 10.7484 13.9408L13.7409 12.4064C14.0864 12.2293 14.0864 11.7707 13.7409 11.5936L10.7484 10.0592C10.4126 9.88702 10 10.1111 10 10.4656V13.5344Z" fill="#currentColor"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M7 2C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2H7ZM4 7C4 5.34315 5.34315 4 7 4H17C18.6569 4 20 5.34315 20 7V17C20 18.6569 18.6569 	20 17 20H7C5.34315 20 4 18.6569 4 17V7Z" fill="#currentColor"/>
+		</svg>
+	</span>
+	<span class="label">Presentation Recording</span>
+	</a>' %}
+{% endif %}
+
+{% if page.slides_url %}
+	{% if page.slides_url == 'true' %}
+		{% assign slides_url = '/files/slides/' | append: file_name | append: '.pdf' %}
+	{% else %}
+		{% assign slides_url = page.slides_url %}
+	{% endif %}
+	
+	{% if page.paper_url or page.preprint_url or page.publisher_url or page.arxiv_url or page.poster_url or page.talk_url or page.virtual_poster %}
+		{% assign links = links | append: links_separator %}
+	{% endif %}
+		
+	{% assign links = links | append: '<a href="' | append: slides_url | append: '" class="link-with-icon" target="_blank">
+	<span class="icon">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="2 2 28 28">
+		<defs>
+		<style>
+			.cls-1 {
+			fill: none;
+			}
+		</style>
+		</defs>
+		<polygon points="4 20 4 22 8.586 22 2 28.586 3.414 30 10 23.414 10 28 12 28 12 20 4 20"/>
+		<polygon points="22 16 24 16 24 10 29 10 29 8 24 8 24 4 30 4 30 2 22 2 22 16"/>
+		<path d="M16,2H12V16h4a4,4,0,0,0,4-4V6A4,4,0,0,0,16,2Zm2,10a2,2,0,0,1-2,2H14V4h2a2,2,0,0,1,2,2Z"/>
+		<path d="M8,2H2V16H4V11H8a2,2,0,0,0,2-2V4A2,2,0,0,0,8,2ZM8,9H4V4H8Z"/>
+		<rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="26" height="26"/>
+	</svg></span>
+	<span class="label">Slides</span>
+	</a>' %}	
+{% endif %}
+
 {% assign links = links | append: '</div>' %}
 {{ links }}
