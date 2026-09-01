@@ -56,22 +56,21 @@
 	{% endif %}
 {% elsif page.collection == 'papers' %}
 
-	{% assign authors_long_formatted = page.authors_long | replace: "!!me!!", "James Bailie" %}
-	
-	{% if page.publication_type %}
-		{% assign authors_long_formatted = authors_long_formatted | append: " (" | append: page.publication_type | append: ")" %}
-	{% endif %}
+
+	{% assign publication_type = page.publication_type %}
+	{% assign authors_raw = page.authors_long %}
+	{% include formatting-authors.html %}
 	
 	{% if page.venue %}
-		{% assign byline = authors_long_formatted | append: ".<br>" %}
+		{% assign byline = authors_formatted | append: "<br>" %}
 		{% if page.to_appear %}
 			{% assign byline = byline | append: "To appear in " %}
 		{% elsif page.to_appear_at %}
 			{% assign byline = byline | append: "To appear at " %}
 		{% endif %}
 		{% assign byline = byline | append: "<i>" | append: page.venue | append: "</i>, " %}
-		{% else %}
-		{% assign byline = authors_long_formatted | append: ", " %}
+	{% else %}
+		{% assign byline = authors_formatted | append: " " %}
 	{% endif %}
 
 	{% assign year = page.date | date: "%Y" %}

@@ -1,0 +1,55 @@
+
+
+{% if publication_type %}
+	{% assign authors_with_type = authors_raw | append: "ENDOFAUTHORS (" | 
+		append: publication_type | append: ")" %}
+{% else %}
+	{% assign authors_with_type = authors_raw %}
+{% endif %}
+		
+{% assign authors_formatted = authors_with_type | replace: "!!me!!", "<b>JB</b>" |
+	replace: ",!!order!!!!equal!!", ",\(\negthinspace^{\dagger*}\)" |
+	replace: ",!!equal!!!!order!!", ",\(\negthinspace^{*\dagger}\)" |
+	replace: ",!!order!!", ",\(\negthinspace^\dagger\)" | 
+	replace: ",!!equal!!", ",\(\negthinspace^*\)" |
+	replace: "!!order!!!!equal!!,", ",\(\negthinspace^{\dagger*}\)" |
+	replace: "!!equal!!!!order!!,", ",\(\negthinspace^{*\dagger}\)" |
+	replace: "!!order!!,", ",\(\negthinspace^\dagger\)" | 
+	replace: "!!equal!!,", ",\(\negthinspace^*\)" |
+	replace: "!!order!!!!equal!!ENDOFAUTHORS (,", "\(\negthinspace^{\dagger*}\) (" |
+	replace: "!!equal!!!!order!!ENDOFAUTHORS (", "\(\negthinspace^{*\dagger}\) (" |
+	replace: "!!order!!ENDOFAUTHORS (", "\(\negthinspace^\dagger\) (" | 
+	replace: "!!equal!!ENDOFAUTHORS (", "\(\negthinspace^*\) (" |
+	replace: "ENDOFAUTHORS (", " (" |
+%}
+
+{% assign parts = authors_formatted | split: '!!' %}
+{% comment %}parts is a list of length 1 or 2. When it is length 1, it is just authors_formatted.
+It is only length 2, when: (1) the final author has a !!equal!! or !!order!! note; and (2) there is no publication_type
+When it is length 2, we need to add the dagger/* after the full stop. We do this by defining byline_sep{% endcomment %}
+
+{% if parts.size > 1 %}
+	{% assign rest = parts | slice: 1, parts.size %}
+	{% assign rest = rest | join: "" | strip | replace: '  ', '' | downcase %}
+
+	{% if rest == "orderequal" %}
+		{% assign byline_sep = ".\(\negthinspace^{\dagger*}\)" %}
+	{% elsif rest == "equalorder" %}
+		{% assign byline_sep = ".\(\negthinspace^{*\dagger}\)" %}
+	{% elsif rest == "equal" %}
+		{% assign byline_sep = ".\(\negthinspace^{*}\)" %}
+	{% elsif rest == "order" %}
+		{% assign byline_sep = ".\(\negthinspace^{\dagger}\)" %}
+	{% else %}
+		{% capture msg %}
+			ERROR: Rest '{{ rest }}' not handled by any case.
+		{% endcapture %}
+		{{ rest | upcase | divided_by: 0 }}
+	{% endif %}
+{% else %}
+	{% assign byline_sep = "." %}
+{% endif %}
+
+{% assign authors_formatted = parts[0] | append: byline_sep %}
+
+
