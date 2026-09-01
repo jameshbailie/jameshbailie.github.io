@@ -15,3 +15,4 @@ arxiv_url: 'https://arxiv.org/abs/2509.10165'
 publisher_url: 'https://link.springer.com/article/10.1007/s40547-025-00158-5'
 ---
 
+There was an unfortunate error during copyediting, which caused the section headers to be incorrectly nested in the published article. See the version here or on arXiv for the correct formatting.
