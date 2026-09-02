@@ -2,7 +2,7 @@
 title: "Differential privacy meets invariant statistics: Some conundrums in quantifying trade-offs"
 collection: papers
 category: privacy
-permalink: /papers/2026-11-15-Differential-Privacy-Meets-Invariant-Statistics
+permalink: /papers/2026-11-15-Differential-privacy-meets-invariant-statistics
 redirect_from: 
   - /papers/2025-04-16-A-refreshment-stirred-not-shaken-III-Can-swapping-be-differentially-private
 date: 2026-11-15
