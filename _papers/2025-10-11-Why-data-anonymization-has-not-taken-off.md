@@ -4,7 +4,7 @@ collection: papers
 category: privacy
 permalink: /papers/2025-10-11-Why-data-anonymization-has-not-taken-off
 date: 2025-10-11
-venue: 'Consumer Needs and Solutions'
+venue: 'Customer Needs and Solutions'
 authors_short: 'MJ Schneider, !!me!!, D Iacobucci'
 authors_long: 'Matthew J. Schneider, !!me!!, Dawn Iacobucci'
 citation: 'Matthew J. Schneider, James Bailie and Dawn Iacobucci (2025). “Why Data Anonymization Has Not Taken Off”. <i>Customer Needs and Solutions</i> 12 (9). issn: 2196-2928. doi: <a href="https://doi.org/10.1007/s40547-025-00158-5" target="_blank">10.1007/s40547-025-00158-5</a>'
