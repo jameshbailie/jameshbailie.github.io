@@ -4,7 +4,7 @@ collection: papers
 category: privacy
 permalink: /papers/2024-08-13-The-complexities-of-differential-privacy-for-survey-data
 date: 2026-11-15
-venue: 'Data Privacy Protection and the Conduct of Applied Research: Methods, Approaches and Their Consequences'
+venue: 'Data Privacy Protection and the Conduct of Applied Research: Methods, Approaches, and New Findings'
 authors_short: 'J Drechsler, !!me!!'
 authors_long: 'Jörg Drechsler, !!me!!'
 publication_type: 'book chapter'

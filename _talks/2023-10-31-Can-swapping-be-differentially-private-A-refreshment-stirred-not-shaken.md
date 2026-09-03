@@ -1,5 +1,5 @@
 ---
-title: "Can swapping be differentially private? A refreshment stirred not shaken"
+title: "Can swapping be differentially private? A refreshment stirred, not shaken"
 collection: talks
 date: 2023-10-31
 permalink: /talks/2023-10-31-Can-swapping-be-differentially-private-A-refreshment-stirred-not-shaken
