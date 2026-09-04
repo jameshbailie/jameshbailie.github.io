@@ -11,6 +11,7 @@ abstract: "Differential privacy (DP) has emerged in the computer science literat
 bibtex_url: 'true'
 paper_url: 'true'
 publisher_url: 'https://content.iospress.com/articles/statistical-journal-of-the-iaos/sji200685'
+arxiv_url: 'https://arxiv.org/abs/2609.02495'
 ---
 
 Winner of the 3rd Prize of the 2020 Young Statisticians Competition, International Association for Official Statistics.
