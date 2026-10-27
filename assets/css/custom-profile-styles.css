@@ -43,8 +43,21 @@ html[data-theme="dark"] .author__content-custom {
 }
 
 
+/* Simple Analytics badge: */
+.simpleanalytics-badge {
+  width: auto;
+  height: 15px;
+}
 
+/* Change the badge based on the site theme. */
+.simpleanalytics-badge--light {
+  display: none;
+}
 
+html[data-theme="dark"] .simpleanalytics-badge--dark {
+  display: none;
+}
 
-
-
+html[data-theme="dark"] .simpleanalytics-badge--light {
+  display: inline;
+}
